@@ -20,13 +20,22 @@ public class Main {
         drawIsoscelesTriangle(3);
 
         System.out.println("Diamond");
-        drawDiamond(5);
+        drawDiamond(3);
 
     }
 
     private static void drawDiamond(int n) {
-        // top and middle
-        for (int i = 0; i < n ; i++) {
+        diamondTopHelper(n);
+
+        for (int i = 1; i <n *2 ; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+        diamondBottomHelper(n);
+    }
+
+    private static void diamondTopHelper(int n){
+        for (int i = 0; i < n-1 ; i++) {
             for (int j = i; j < n-1; j++) {
                 System.out.print(" ");
             }
@@ -36,8 +45,9 @@ public class Main {
             }
             System.out.println();
         }
+    }
 
-        // bottom
+    private static void diamondBottomHelper(int n){
         for (int i = 1; i < n ; i++) {
             for (int j = 0; j < i; j++) {
                 System.out.print(" ");
