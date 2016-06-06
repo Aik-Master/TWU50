@@ -4,27 +4,46 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Easiest exercise ever");
+        System.out.println("\nEasiest exercise ever");
         printAsterisk();
 
-        System.out.println("Draw a horizontal line");
+        System.out.println("\nDraw a horizontal line");
         printAsterisks2(8);
 
-        System.out.println("Draw a vertical line");
+        System.out.println("\nDraw a vertical line");
         drawAVerticalLine(3);
 
-        System.out.println("Draw a right triangle");
+        System.out.println("\nDraw a right triangle");
         drawRightTriangle(3);
 
-        System.out.println("Isosceles Triangle");
+        System.out.println("\nIsosceles Triangle");
         drawIsoscelesTriangle(3);
 
-        System.out.println("Diamond");
+        System.out.println("\nDiamond");
         drawDiamond(3);
 
-        System.out.println("Diamond with Name");
+        System.out.println("\nDiamond with Name");
         drawDiamondWithName(5, "Name");
 
+        System.out.println("\nFizzBuzz");
+        fizzBuzz();
+
+    }
+
+    private static void fizzBuzz() {
+        for (int i = 1; i <= 100; i++) {
+            String output;
+            if (i%3 == 0 && i%5 == 0){
+                output = "FizzBuzz";
+            }else if(i%3 == 0){
+                output = "Fizz";
+            }else if(i%5 == 0){
+                output = "Buzz";
+            }else{
+                output = new Integer(i).toString();
+            }
+            System.out.println(output);
+        }
     }
 
     private static void drawDiamondWithName(int n, String name) {
@@ -46,6 +65,7 @@ public class Main {
         diamondBottomHelper(n);
     }
 
+    // TOneverDO  parameterize diamond helper to make one helper
     private static void diamondTopHelper(int n){
         for (int i = 0; i < n-1 ; i++) {
             for (int j = i; j < n-1; j++) {
