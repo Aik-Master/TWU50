@@ -12,6 +12,10 @@ public class Main {
 
         System.out.println("Draw a vertical line");
         drawAVerticalLine(3);
+        
+        System.out.println("Draw a right triangle");
+        drawRightTriangle(3);
+
     }
 
     private static void drawAVerticalLine(int n) {
@@ -20,6 +24,15 @@ public class Main {
         }
     }
 
+    private static void drawRightTriangle(int n) {
+        for (int i = 0; i < n ; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+        }
+    }
 
     private static void printAsterisk() {
         System.out.println("*");
