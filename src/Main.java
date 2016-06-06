@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by akloster on 6/3/16.
  */
@@ -28,6 +31,22 @@ public class Main {
         System.out.println("\nFizzBuzz");
         fizzBuzz();
 
+        System.out.println("\nPrime Factors(30)");
+        for (Integer integer : generate(30)) {
+            System.out.print(integer+", ");
+        }
+        System.out.println();
+    }
+
+    private static List<Integer> generate(int n) {
+        List<Integer> primefactors = new ArrayList<>();
+        for (int i = 2; i <= n; i++) {
+            while (n % i == 0) {
+                primefactors.add(i);
+                n /= i;
+            }
+        }
+        return primefactors;
     }
 
     private static void fizzBuzz() {
