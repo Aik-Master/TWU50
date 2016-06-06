@@ -22,6 +22,18 @@ public class Main {
         System.out.println("Diamond");
         drawDiamond(3);
 
+        System.out.println("Diamond with Name");
+        drawDiamondWithName(5, "Name");
+
+    }
+
+    private static void drawDiamondWithName(int n, String name) {
+
+        diamondTopHelper(n);
+
+        System.out.println(name);
+
+        diamondBottomHelper(n);
     }
 
     private static void drawDiamond(int n) {
