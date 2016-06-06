@@ -12,10 +12,26 @@ public class Main {
 
         System.out.println("Draw a vertical line");
         drawAVerticalLine(3);
-        
+
         System.out.println("Draw a right triangle");
         drawRightTriangle(3);
 
+        System.out.println("Isosceles Triangle");
+        drawIsoscelesTriangle(3);
+
+    }
+
+    private static void drawIsoscelesTriangle(int n) {
+        for (int i = 0; i < n ; i++) {
+            for (int j = i; j < n-1; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j <= i*2; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     private static void drawAVerticalLine(int n) {
