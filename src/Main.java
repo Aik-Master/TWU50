@@ -6,9 +6,20 @@ public class Main {
 
         System.out.println("Easiest exercise ever");
         printAsterisk();
+
         System.out.println("Draw a horizontal line");
         printAsterisks2(8);
+
+        System.out.println("Draw a vertical line");
+        drawAVerticalLine(3);
     }
+
+    private static void drawAVerticalLine(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println("*");
+        }
+    }
+
 
     private static void printAsterisk() {
         System.out.println("*");
